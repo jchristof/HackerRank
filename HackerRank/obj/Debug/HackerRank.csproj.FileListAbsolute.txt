@@ -1,0 +1,7 @@
+c:\users\jon.martin\documents\visual studio 2017\Projects\HackerRank\HackerRank\bin\Debug\HackerRank.exe.config
+c:\users\jon.martin\documents\visual studio 2017\Projects\HackerRank\HackerRank\bin\Debug\HackerRank.exe
+c:\users\jon.martin\documents\visual studio 2017\Projects\HackerRank\HackerRank\bin\Debug\HackerRank.pdb
+c:\users\jon.martin\documents\visual studio 2017\Projects\HackerRank\HackerRank\obj\Debug\HackerRank.csprojResolveAssemblyReference.cache
+c:\users\jon.martin\documents\visual studio 2017\Projects\HackerRank\HackerRank\obj\Debug\HackerRank.csproj.CoreCompileInputs.cache
+c:\users\jon.martin\documents\visual studio 2017\Projects\HackerRank\HackerRank\obj\Debug\HackerRank.exe
+c:\users\jon.martin\documents\visual studio 2017\Projects\HackerRank\HackerRank\obj\Debug\HackerRank.pdb
