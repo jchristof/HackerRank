@@ -158,5 +158,8 @@ namespace HackerRankUnitTests {
             return bitValue == 0 ? value & ~(1 << bitIndex) : value | 1 << bitIndex;
         }
 
+        static int lonelyinteger(int[] a) {
+            return a.GroupBy(x => x).FirstOrDefault(g => g.Count() == 1)?.Key ?? 0;
+        }
 
     }
