@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace HackerRankUnitTests {
+
     [TestClass]
     public class HackerRank {
-        [TestMethod]
-        public void DiagonalDifference() {
 
-        }
+        [TestMethod]
+        public void DiagonalDifference() { }
 
         static int _diagonalDifference(int[][] a) {
             var length = a.Length;
@@ -84,6 +83,7 @@ namespace HackerRankUnitTests {
             military = timeConversion("01:00:00PM");
             Assert.IsTrue(military == "13:00:00");
         }
+
         static string timeConversion(string s) {
             var am = s.EndsWith("am", StringComparison.InvariantCultureIgnoreCase);
             s = s.Substring(0, s.Length - 2);
@@ -91,7 +91,8 @@ namespace HackerRankUnitTests {
             if (s.StartsWith("12"))
                 s = "00" + s.Substring(2, s.Length - 2);
 
-            if (am) return s;
+            if (am)
+                return s;
 
             return (Convert.ToInt32(s.Substring(0, 2)) + 12).ToString("D2") + s.Substring(2, s.Length - 2);
         }
@@ -130,16 +131,16 @@ namespace HackerRankUnitTests {
 
                 switch (command[0]) {
                     case "set_a": {
-                            int index = Convert.ToInt32(command[1]);
-                            int bitValue = Convert.ToInt32(command[2]);
-                            aValue = SetOrClear(aValue, index, bitValue);
-                        }
+                        int index = Convert.ToInt32(command[1]);
+                        int bitValue = Convert.ToInt32(command[2]);
+                        aValue = SetOrClear(aValue, index, bitValue);
+                    }
                         break;
                     case "set_b": {
-                            int index = Convert.ToInt32(command[1]);
-                            int bitValue = Convert.ToInt32(command[2]);
-                            aValue = SetOrClear(aValue, index, bitValue);
-                        }
+                        int index = Convert.ToInt32(command[1]);
+                        int bitValue = Convert.ToInt32(command[2]);
+                        aValue = SetOrClear(aValue, index, bitValue);
+                    }
                         break;
                     case "get_c":
                         var bitToCheck = Convert.ToInt32(command[1]);
@@ -162,4 +163,19 @@ namespace HackerRankUnitTests {
             return a.GroupBy(x => x).FirstOrDefault(g => g.Count() == 1)?.Key ?? 0;
         }
 
+        [TestMethod]
+        static int[] solve(int[] grades) {
+            return grades.Select(x => {
+                if (x < 38)
+                    return x;
+
+                var difference = 5 - (x % 5);
+                if (difference < 3)
+                    return x + difference;
+
+                return x;
+            }).ToArray();
+        }
     }
+
+}
